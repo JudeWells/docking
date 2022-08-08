@@ -1,0 +1,14 @@
+receptor = /home/jwells/Documents/docking/7nio_v2.pdbqt
+ligand = /home/jwells/Documents/docking/ligand_CID_13397002.pdbqt
+
+center_x = -34.955
+center_y = -3.762
+center_z = 9.778
+
+size_x = 92
+size_y = 108
+size_z = 90
+
+energy_range = 4
+
+exhaustiveness = 8 

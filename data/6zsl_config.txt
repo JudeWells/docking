@@ -1,0 +1,14 @@
+receptor = /home/jwells/Documents/docking/6zsl.pdbqt
+ligand = /home/jwells/Documents/docking/ligand_CID_13397002.pdbqt
+
+center_x = -20.414
+center_y = 22.969
+center_z = -76.684
+
+size_x = 91
+size_y = 95
+size_z = 97
+
+energy_range = 5
+
+exhaustiveness = 16
