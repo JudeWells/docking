@@ -1,0 +1,112 @@
+Mrv15a5 06272219112D
+
+25 27  0  0  1  0            999 V2000
+ -0.5837   -1.4124    0.0000 O   0  5  0  0  0  0  0  0  0  0  0  0
+ -0.1712   -0.6979    0.0000 N   0  3  0  0  0  0  0  0  0  0  0  0
+ -0.5837    0.0165    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+  0.6538   -0.6979    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  1.1387   -0.0305    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  1.9233   -0.2854    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+  2.6378    0.1271    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  3.3523   -0.2854    0.0000 C   0  0  1  0  0  0  0  0  0  0  0  0
+  3.3523   -1.1104    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  2.6378   -1.5229    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+  1.9233   -1.1104    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  1.1387   -1.3654    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+  4.0668    0.1271    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+  4.0668    0.9521    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  4.7812    1.3646    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  4.7812    2.1896    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  5.4957    2.6021    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  6.2102    2.1896    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  6.9246    2.6021    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+  6.9246    3.4271    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  6.9246    4.2521    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0
+  7.7496    3.4271    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0
+  6.0996    3.4271    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0
+  6.2102    1.3646    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  5.4957    0.9521    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+1  2  1  0  0  0  0
+2  3  2  0  0  0  0
+2  4  1  0  0  0  0
+4  5  2  0  0  0  0
+5  6  1  0  0  0  0
+6  7  1  0  0  0  0
+7  8  1  0  0  0  0
+8  9  1  0  0  0  0
+9 10  1  0  0  0  0
+10 11  1  0  0  0  0
+6 11  1  0  0  0  0
+11 12  2  0  0  0  0
+4 12  1  0  0  0  0
+8 13  1  6  0  0  0
+13 14  1  0  0  0  0
+14 15  1  0  0  0  0
+15 16  1  0  0  0  0
+16 17  2  0  0  0  0
+17 18  1  0  0  0  0
+18 19  1  0  0  0  0
+19 20  1  0  0  0  0
+20 21  1  0  0  0  0
+20 22  1  0  0  0  0
+20 23  1  0  0  0  0
+18 24  2  0  0  0  0
+24 25  1  0  0  0  0
+15 25  2  0  0  0  0
+M  CHG  2   1  -1   2   1
+M  END
+>  <Catalog ID>
+Z1650127771
+
+>  <MW>
+359.073
+
+>  <MW (desalted)>
+359.257
+
+>  <ClogP>
+2.792
+
+>  <logS>
+-5.309
+
+>  <HBD>
+0
+
+>  <HBA>
+6
+
+>  <TPSA>
+88.65
+
+>  <RotBonds>
+6
+
+>  <Name>
+Pretomanid
+
+>  <MOA>
+Pretomanid kills the actively replicating bacteria causing tuberculosis, known as Mycobacterium tuberculosis, and shortens the duration of treatment in patients who suffer from resistant forms of pulmonary TB by killing dormant bacteria. Pretomanid is indicated for adults in combination with bedaquiline and linezolid for the treatment of pulmonary forms of nonresponsive multidrug-resistant, extensively drug-resistant, and treatment-intolerant forms of pulmonary tuberculosis.
+
+>  <Target>
+3-oxoacyl-[acyl-carrier-protein] synthase 1 pX=7.0
+
+>  <Disease Area>
+antibacterial agent | antibiofilm agent | antibiotic agent | antichagasic agent | antifungal agent | antileishmanial agent | antimicrobial agent | antimycobacterial agent | antitrypanosomal agent | antitubercular agent | cytotoxic agent | diagnostic agent | metabolic activity
+
+>  <Phase>
+approved
+
+>  <Smiles>
+[O-][N+](=O)C1=CN2C[C@@H](COC2=N1)OCC1=CC=C(OC(F)(F)F)C=C1
+
+>  <CAS>
+187235-37-6
+
+>  <DrugBank ID>
+DB05154
+
+>  <Targets>
+3-oxoacyl-[acyl-carrier-protein] synthase 1
+
+$$$$
