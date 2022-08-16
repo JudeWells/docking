@@ -96,6 +96,7 @@ def prepare_ligand_runner(lig_dir):
 
 
 if __name__=="__main__":
+    print(os.getcwd())
     library_dir = 'enamine_collections/'
     output_dir = 'enamine_processed'
     for library in os.listdir(library_dir):
