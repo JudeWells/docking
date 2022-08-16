@@ -67,7 +67,7 @@ def prepare_ligand(ligand, input_type='mol2', method='gaff'):
     else:
       raise TypeError('only `mol2` supported for docking')
 
-def prepare_ligand(ligand_in_path):
+def lig_sdf_2_mol2(ligand_in_path):
     ligand_dir, ligname = os.path.split(ligand_in_path)
     out_dir = os.path.join(ligand_dir, 'processed')
     os.makedirs(out_dir, exist_ok=True)
@@ -76,12 +76,23 @@ def prepare_ligand(ligand_in_path):
     print(cmd_)
     exec_shell_command(cmd_)
 
+def lig_mol2_2_pdbqt(ligand_in_path):
+    ligand_dir, ligname = os.path.split(ligand_in_path)
+    ligand_out_path = os.path.join(ligand_dir, ligname.split('.')[0])
+    cmd_ = gen_cmd_str(cmd_dict['mol22pdbqt'], '%s' %(ligand_in_path), '%s.pdbqt'%(ligand_out_path))
+    exec_shell_command(cmd_)
+    os.remove(ligand_in_path)
+
 def prepare_ligand_runner(lig_dir):
     out_dir = os.path.join(lig_dir, 'processed')
     os.makedirs(out_dir, exist_ok=True)
     lig_fnames = [f for f in os.listdir(lig_dir) if '.sdf' in f]
     for lig in lig_fnames:
-        prepare_ligand(os.path.join(lig_dir, lig))
+        lig_sdf_2_mol2(os.path.join(lig_dir, lig))
+        break
+    mol2_ligs = [f for f in os.listdir(out_dir) if '.mol2' in f]
+    for lig in mol2_ligs:
+        lig_mol2_2_pdbqt(os.path.join(out_dir, lig))
 
 
 
