@@ -80,8 +80,8 @@ def lig_sdf_2_mol2(ligand_in_path):
 
 def lig_mol2_2_pdbqt(ligand_in_path, del_mol2=True):
     ligand_dir, ligname = os.path.split(ligand_in_path)
-    ligand_out_path = os.path.join(ligand_dir, ligname.split('.')[0])
-    cmd_ = gen_cmd_str(cmd_dict['mol22pdbqt'], '%s' %(ligand_in_path), '%s.pdbqt'%(ligand_out_path))
+    ligand_out_path = os.path.join(ligand_dir, ligname.split('.')[0] + '.pdbqt')
+    cmd_ = gen_cmd_str(cmd_dict['mol22pdbqt'], '%s' %(ligand_in_path), '%s'%(ligand_out_path))
     print(cmd_)
     exec_shell_command(cmd_)
     if os.path.exists(ligand_out_path + '.pdbqt') and del_mol2:
