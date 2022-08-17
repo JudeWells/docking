@@ -17,17 +17,17 @@ cmd_dict = {
    'pdb2pqr': 'pdb2pqr --ff=amber --chain --with-ph=7.4 --verbose %s %s',
    'pqr2pdbqt': 'prepare_receptor4.py -r %s -o %s -C -U nphs_lps -v',
   ### ligand prep
-   'split_bulk': 'obabel %s -O %s -m',
-   'split_bulk_sdf2mol2': 'obabel -isdf %s -omol2 -O %s -m',
+   'split_bulk': '/home/jwells/Tools/bin/obabel %s -O %s -m',
+   'split_bulk_sdf2mol2': '/home/jwells/Tools/bin/obabel -isdf %s -omol2 -O %s -m',
    # choose either:
-   'smi2mol2': 'obabel %s -O %s --gen3d --best --canonical --conformers --weighted --nconf 50 --ff GAFF',
+   'smi2mol2': '/home/jwells/Tools/bin/obabel %s -O %s --gen3d --best --canonical --conformers --weighted --nconf 50 --ff GAFF',
    # or:
-   'smi2mol2_ph74': 'obabel %s -O %s --gen3d best -p 7.4 --canonical',
+   'smi2mol2_ph74': '/home/jwells/Tools/bin/obabel %s -O %s --gen3d best -p 7.4 --canonical',
    # or:
-   'smi2mol2_gaff': 'obabel %s -O %s --gen3d --best --canonical --minimize --ff GAFF --steps 10000 --sd',
+   'smi2mol2_gaff': '/home/jwells/Tools/bin/obabel %s -O %s --gen3d --best --canonical --minimize --ff GAFF --steps 10000 --sd',
    'mol22pdbqt': 'prepare_ligand4.py -l %s -o %s -U nphs_lps -v',
   ### docking
-   'split_bulk_pdbqt2pdb': 'obabel -ipdbqt %s -opdb -O %s -m',
+   'split_bulk_pdbqt2pdb': '/home/jwells/Tools/bin/obabel -ipdbqt %s -opdb -O %s -m',
 }
 
 def gen_cmd_str(cmd_str, infile, outfile):
