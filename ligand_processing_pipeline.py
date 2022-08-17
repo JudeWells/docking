@@ -78,14 +78,21 @@ def lig_sdf_2_mol2(ligand_in_path):
     print(cmd_)
     exec_shell_command(cmd_)
 
-def lig_mol2_2_pdbqt(ligand_in_path):
+def lig_mol2_2_pdbqt(ligand_in_path, del_mol2=True):
     ligand_dir, ligname = os.path.split(ligand_in_path)
     ligand_out_path = os.path.join(ligand_dir, ligname.split('.')[0])
     cmd_ = gen_cmd_str(cmd_dict['mol22pdbqt'], '%s' %(ligand_in_path), '%s.pdbqt'%(ligand_out_path))
     print(cmd_)
     exec_shell_command(cmd_)
-    if os.path.exists(ligand_out_path + '.pdbqt'):
+    if os.path.exists(ligand_out_path + '.pdbqt') and del_mol2:
         os.remove(ligand_in_path)
+    return ligand_out_path
+
+def run_docking(receptor, ligand, config, log, out, vina='autodock_vina_1_1_2_linux_x86/bin/vina'):
+    cmd_ = f"{vina} --receptor {receptor} --ligand {ligand} \
+    --config {config} --log {log} --out {out}"
+    exec_shell_command(cmd_)
+
 
 def prepare_ligand_runner(lig_dir):
     out_dir = os.path.join(lig_dir, 'processed')
