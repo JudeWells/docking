@@ -86,9 +86,9 @@ def lig_mol2_2_pdbqt(ligand_in_path):
 def prepare_ligand_runner(lig_dir):
     out_dir = os.path.join(lig_dir, 'processed')
     os.makedirs(out_dir, exist_ok=True)
-    lig_fnames = [f for f in os.listdir(lig_dir) if '.sdf' in f]
-    for lig in lig_fnames:
-        lig_sdf_2_mol2(os.path.join(lig_dir, lig))
+    # lig_fnames = [f for f in os.listdir(lig_dir) if '.sdf' in f]
+    # for lig in lig_fnames:
+    #     lig_sdf_2_mol2(os.path.join(lig_dir, lig))
     mol2_ligs = [f for f in os.listdir(out_dir) if '.mol2' in f]
     for lig in mol2_ligs:
         lig_mol2_2_pdbqt(os.path.join(out_dir, lig))
