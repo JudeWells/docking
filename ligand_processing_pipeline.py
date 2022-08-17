@@ -25,7 +25,7 @@ cmd_dict = {
    'smi2mol2_ph74': '/home/jwells/Tools/bin/obabel %s -O %s --gen3d best -p 7.4 --canonical',
    # or:
    'smi2mol2_gaff': '/home/jwells/Tools/bin/obabel %s -O %s --gen3d --best --canonical --minimize --ff GAFF --steps 10000 --sd',
-   'mol22pdbqt': '/SAN/orengolab/nsp13/docking/miniconda3/bin/prepare_ligand4.py -l %s -o %s -U nphs_lps -v',
+   'mol22pdbqt': 'prepare_ligand4.py -l %s -o %s -U nphs_lps -v',
   ### docking
    'split_bulk_pdbqt2pdb': '/home/jwells/Tools/bin/obabel -ipdbqt %s -opdb -O %s -m',
 }
