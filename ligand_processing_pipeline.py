@@ -84,7 +84,8 @@ def lig_mol2_2_pdbqt(ligand_in_path):
     cmd_ = gen_cmd_str(cmd_dict['mol22pdbqt'], '%s' %(ligand_in_path), '%s.pdbqt'%(ligand_out_path))
     print(cmd_)
     exec_shell_command(cmd_)
-    os.remove(ligand_in_path)
+    if os.path.exists(ligand_out_path + '.pdbqt'):
+        os.remove(ligand_in_path)
 
 def prepare_ligand_runner(lig_dir):
     out_dir = os.path.join(lig_dir, 'processed')
