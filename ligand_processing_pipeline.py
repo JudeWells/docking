@@ -35,7 +35,8 @@ def gen_cmd_str(cmd_str, infile, outfile):
 
 ### LIGAND
 def split_bulk_to_single(bulk_path, single_path, method="no_conversion"):
-    os.makedirs(os.path.split(single_path)[0], exist_ok=True)
+    if not os.path.exists(os.path.split(single_path)[0]):
+        os.makedirs(os.path.split(single_path)[0])
     method_dict = {
           'no_conversion': cmd_dict['split_bulk'],
           'pdbqt2pdb': cmd_dict['split_bulk_pdbqt2pdb'],
@@ -70,7 +71,8 @@ def prepare_ligand(ligand, input_type='mol2', method='gaff'):
 def lig_sdf_2_mol2(ligand_in_path):
     ligand_dir, ligname = os.path.split(ligand_in_path)
     out_dir = os.path.join(ligand_dir, 'processed')
-    os.makedirs(out_dir, exist_ok=True)
+    if not os.path.exists(os.path.split(out_dir)[0]):
+        os.makedirs(out_dir)
     ligand_out_path = os.path.join(out_dir, ligname).split('.mol2')[0]
     cmd_ = gen_cmd_str(cmd_dict['smi2mol2'], '%s' % (ligand_in_path), '%s.mol2' % (ligand_out_path))
     print(cmd_)
@@ -86,7 +88,8 @@ def lig_mol2_2_pdbqt(ligand_in_path):
 
 def prepare_ligand_runner(lig_dir):
     out_dir = os.path.join(lig_dir, 'processed')
-    os.makedirs(out_dir, exist_ok=True)
+    if not os.path.exists(out_dir):
+        os.makedirs(out_dir)
     lig_fnames = [f for f in os.listdir(lig_dir) if '.sdf' in f]
     for lig in lig_fnames:
         lig_sdf_2_mol2(os.path.join(lig_dir, lig))
