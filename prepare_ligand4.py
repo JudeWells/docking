@@ -55,7 +55,7 @@ if __name__ == '__main__':
     try:
         opt_list, args = getopt.getopt(sys.argv[1:], 'l:vo:d:A:Cp:U:B:R:MFI:Zgswh')
     except getopt.GetoptError, msg:
-        print 'prepare_ligand4.py: %s' %msg
+        print( 'prepare_ligand4.py: %s' %msg)
         usage()
         sys.exit(2)
 
@@ -103,23 +103,23 @@ if __name__ == '__main__':
         if o in ('-l', '--l'):
             #ligand_filename = a
             ligand_filename = os.path.basename(a)
-            if verbose: print 'set ligand_filename to ', a
+            if verbose: print( 'set ligand_filename to ', a)
             ligand_ext = os.path.splitext(os.path.basename(a))[1] # eg .mol2
         if o in ('-v', '--v'):
             verbose = True
-            if verbose: print 'set verbose to ', True
+            if verbose: print( 'set verbose to ', True)
         if o in ('-o', '--o'):
             outputfilename = a
-            if verbose: print 'set outputfilename to ', a
+            if verbose: print( 'set outputfilename to ', a)
         if o in ('-d', '--d'):
             dict = a
-            if verbose: print 'set dict to ', a
+            if verbose: print( 'set dict to ', a)
         if o in ('-A', '--A'):
             repairs = a
-            if verbose: print 'set repairs to ', a
+            if verbose: print( 'set repairs to ', a)
         if o in ('-C', '--C'):
             charges_to_add = None
-            if verbose: print 'do not add charges'
+            if verbose: print( 'do not add charges')
         if o in ('-p', '--p'):
             # case1: single character
             # examples of 1 character element AND 1 character autodock element: B,C,N,O,F,P,S
