@@ -1,3 +1,4 @@
 .DS_Store
 enamine_collections/
 nsp13_ligand_screening/
+__pycache__/
